@@ -9,8 +9,14 @@
 <body>
 
     <a-scene embedded arjs>
+
+        <a-assets>
+            <a-asset-item id="saturn" src="saturn.gltf"></a-asset-item>
+        </a-assets>
+
+        <a-entity position="3 1.25 -5" gltf-model="#saturn"></a-entity>
         <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-        <a-text value="Hello, World!"></a-text>
+<!--        <a-text value="Hello, World!"></a-text>-->
 <!--        <a-camera position="0 2 2"></a-camera>-->
     </a-scene>
 
