@@ -1,3 +1,3 @@
-document.getElementById('s1').addEventListener('click', () => {
-   alert('works');
+document.getElementById('s1').addEventListener('load', () => {
+   console.log('LOADED');
 });
