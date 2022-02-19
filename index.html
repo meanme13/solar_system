@@ -10,7 +10,12 @@
 </head>
 <body>
 
-    <a-scene embedded arjs>
+    <a-scene
+        vr-mode-ui="enabled: false;"
+        renderer="logarithmicDepthBuffer: true;"
+        embedded
+        arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+    >
 
         <a-assets>
             <a-asset-item id="saturn" src="saturn.gltf"></a-asset-item>
