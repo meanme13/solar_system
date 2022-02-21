@@ -13,12 +13,14 @@
 
     AFRAME.registerComponent('cursor-listener', {
         init: function () {
-            var lastIndex = -1;
-            var COLORS = ['red', 'green', 'blue'];
-            this.el.addEventListener('touchmove', function (evt) {
-                lastIndex = (lastIndex + 1) % COLORS.length;
-                this.setAttribute('material', 'color', COLORS[lastIndex]);
-                console.log('I was clicked');
+            // var lastIndex = -1;
+            // var COLORS = ['red', 'green', 'blue'];
+            this.el.addEventListener('mouseenter', function () {
+                // lastIndex = (lastIndex + 1) % COLORS.length;
+                // this.setAttribute('material', 'color', COLORS[lastIndex]);
+                // console.log('I was clicked');
+                this.setAttribute('animation', {property: 'position', to: {x: 0, y: 1.25, z: -1}, dur: 500, easing: 'linear'});
+                // this.setAttribute('position', {x: 0, y: 1.25, z: -1});
             });
         }
     });
@@ -35,8 +37,6 @@
         <a-assets>
             <a-asset-item id="saturn" src="saturn.gltf"></a-asset-item>
         </a-assets>
-
-        <a-box color="#EF2D5E" position="0 1 -4" change-color-on-hover="color: blue"></a-box>
 
 <!--        <a-entity position="3 1.25 -5" gltf-model="#saturn"></a-entity>-->
         <a-sphere class="clickable" cursor-listener position="-7.25 0 -5" radius="0.8" material="color: #EF2D5E"></a-sphere>
