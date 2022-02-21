@@ -1,5 +1,4 @@
-document.getElementsByTagName("body").onload = () => {
-   document.getElementById('s1').addEventListener('click', () => {
-      alert('LOADED');
-   });
-};
+let planet = document.querySelector('#planet');
+planet.addEventListener('click', () => {
+    alert('worksss');
+})
