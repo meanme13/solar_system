@@ -13,14 +13,9 @@
 
     AFRAME.registerComponent('cursor-listener', {
         init: function () {
-            // var lastIndex = -1;
-            // var COLORS = ['red', 'green', 'blue'];
+            // let positionX = this.getAttribute('position');
             this.el.addEventListener('mouseenter', function () {
-                // lastIndex = (lastIndex + 1) % COLORS.length;
-                // this.setAttribute('material', 'color', COLORS[lastIndex]);
-                // console.log('I was clicked');
                 this.setAttribute('animation', {property: 'position', to: {x: 0, y: 1.25, z: -1}, dur: 500, easing: 'linear'});
-                // this.setAttribute('position', {x: 0, y: 1.25, z: -1});
             });
         }
     });
@@ -31,24 +26,26 @@
         vr-mode-ui="enabled: false;"
         renderer="logarithmicDepthBuffer: true;"
         embedded
-        arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
-    >
+        arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
 
-        <a-assets>
-            <a-asset-item id="saturn" src="saturn.gltf"></a-asset-item>
-        </a-assets>
-
-<!--        <a-entity position="3 1.25 -5" gltf-model="#saturn"></a-entity>-->
+        <a-sphere class="clickable" cursor-listener position="-6.25 0 5" radius="0.8" material="color: #EF2D5E"></a-sphere>
+        <a-sphere class="clickable" cursor-listener position="-8.25 0 0" radius="0.8" material="color: #EF2D5E"></a-sphere>
         <a-sphere class="clickable" cursor-listener position="-7.25 0 -5" radius="0.8" material="color: #EF2D5E"></a-sphere>
-<!--        <a-sphere position="-5.5 0 -6.2" radius="0.8" color="#EF2D5E"></a-sphere>-->
-<!--        <a-sphere position="-2.85 0 -7.1" radius="0.8" color="#EF2D5E"></a-sphere>-->
-<!--        <a-sphere class="clickable" cursor-listener position="0 1.25 -1" radius="1" material="color: #DDDDDD"></a-sphere>-->
-<!--        <a-sphere position="2.85 0 -7" radius="0.8" color="#EF2D5E"></a-sphere>-->
-<!--        <a-sphere position="5.5 0 -6.2" radius="0.8" color="#EF2D5E"></a-sphere>-->
+        <a-sphere class="clickable" cursor-listener position="-4.25 0 -7" radius="0.8" material="color: #EF2D5E"></a-sphere>
+        <a-sphere class="clickable" cursor-listener position="4.25 0 -7" radius="0.8" material="color: #EF2D5E"></a-sphere>
         <a-sphere class="clickable" cursor-listener position="7.25 0 -5" radius="0.8" material="color: #EF2D5E"></a-sphere>
-<!--        <a-entity camera></a-entity>-->
-<!--        <a-text value="Hello, World!"></a-text>-->
-        <a-camera position="0 2 5"><a-cursor fuse="false" material="color: transparent" raycaster="far: 20; interval: 500; objects: .clickable"></a-cursor></a-camera>
+        <a-sphere class="clickable" cursor-listener position="8.25 0 0" radius="0.8" material="color: #EF2D5E"></a-sphere>
+        <a-sphere class="clickable" cursor-listener position="6.25 0 5" radius="0.8" material="color: #EF2D5E"></a-sphere>
+        <a-sphere class="clickable" cursor-listener position="4.25 0 7" radius="0.8" material="color: #EF2D5E"></a-sphere>
+
+        <a-camera position="0 2 5">
+            <a-cursor
+                fuse="false"
+                material="color: transparent"
+                raycaster="far: 20; interval: 500; objects: .clickable"
+            ></a-cursor>
+        </a-camera>
+
     </a-scene>
     <script src="app.js"></script>
 </body>
