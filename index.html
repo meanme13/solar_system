@@ -42,13 +42,13 @@
 <!--        <a-sphere position="-7.25 0 -5" radius="0.8" color="#EF2D5E"></a-sphere>-->
 <!--        <a-sphere position="-5.5 0 -6.2" radius="0.8" color="#EF2D5E"></a-sphere>-->
 <!--        <a-sphere position="-2.85 0 -7.1" radius="0.8" color="#EF2D5E"></a-sphere>-->
-        <a-sphere cursor-listener position="0 1.25 -1" radius="1" material="color: #DDDDDD"></a-sphere>
+        <a-sphere class="clickable" cursor-listener position="0 1.25 -1" radius="1" material="color: #DDDDDD"></a-sphere>
 <!--        <a-sphere position="2.85 0 -7" radius="0.8" color="#EF2D5E"></a-sphere>-->
 <!--        <a-sphere position="5.5 0 -6.2" radius="0.8" color="#EF2D5E"></a-sphere>-->
 <!--        <a-sphere position="7.25 0 -5" radius="0.8" color="#EF2D5E"></a-sphere>-->
 <!--        <a-entity camera></a-entity>-->
 <!--        <a-text value="Hello, World!"></a-text>-->
-        <a-camera position="0 2 5"><a-cursor fuse="false" material="color: transparent"></a-cursor></a-camera>
+        <a-camera position="0 2 5"><a-cursor fuse="false" material="color: transparent" raycaster="far: 50; interval: 500; objects: .clickable"></a-cursor></a-camera>
     </a-scene>
     <script src="app.js"></script>
 </body>
