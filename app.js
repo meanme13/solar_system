@@ -1,4 +1,4 @@
-// let planet = document.querySelector('#planet');
-// planet.addEventListener('click', () => {
-//     alert('worksss');
-// })
+let planet = document.querySelector('#planet');
+planet.addEventListener('click', () => {
+    alert('worksss');
+})
