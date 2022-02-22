@@ -13,9 +13,11 @@
 
     AFRAME.registerComponent('cursor-listener', {
         init: function () {
-            // let positionX = this.getAttribute('position');
             this.el.addEventListener('mouseenter', function () {
-                this.setAttribute('animation', {property: 'position', to: {x: 0, y: 1.25, z: -1}, dur: 500, easing: 'linear'});
+                this.setAttribute('animation', {property: 'scale', to: '2, 2, 2', dur: 300, easing: 'linear'});
+            });
+            this.el.addEventListener('mouseleave', function () {
+                this.setAttribute('animation', {property: 'scale', to: '1, 1, 1', dur: 300, easing: 'linear'});
             });
         }
     });
@@ -28,15 +30,15 @@
         embedded
         arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
 
-        <a-sphere class="clickable" cursor-listener position="-6.25 0 5" radius="0.8" material="color: #EF2D5E"></a-sphere>
-        <a-sphere class="clickable" cursor-listener position="-8.25 0 0" radius="0.8" material="color: #EF2D5E"></a-sphere>
-        <a-sphere class="clickable" cursor-listener position="-7.25 0 -5" radius="0.8" material="color: #EF2D5E"></a-sphere>
-        <a-sphere class="clickable" cursor-listener position="-4.25 0 -7" radius="0.8" material="color: #EF2D5E"></a-sphere>
-        <a-sphere class="clickable" cursor-listener position="4.25 0 -7" radius="0.8" material="color: #EF2D5E"></a-sphere>
-        <a-sphere class="clickable" cursor-listener position="7.25 0 -5" radius="0.8" material="color: #EF2D5E"></a-sphere>
-        <a-sphere class="clickable" cursor-listener position="8.25 0 0" radius="0.8" material="color: #EF2D5E"></a-sphere>
-        <a-sphere class="clickable" cursor-listener position="6.25 0 5" radius="0.8" material="color: #EF2D5E"></a-sphere>
-        <a-sphere class="clickable" cursor-listener position="4.25 0 7" radius="0.8" material="color: #EF2D5E"></a-sphere>
+        <a-sphere class="clickable" cursor-listener position="-7.5 0 4" radius="0.8" material="color: #EF2D5E"></a-sphere>
+        <a-sphere class="clickable" cursor-listener position="-8.52 0 0" radius="0.8" material="color: #EF2D5E"></a-sphere>
+        <a-sphere class="clickable" cursor-listener position="-7.5 0 -4" radius="0.8" material="color: #EF2D5E"></a-sphere>
+        <a-sphere class="clickable" cursor-listener position="-4.8 0 -7" radius="0.8" material="color: #EF2D5E"></a-sphere>
+        <a-sphere class="clickable" cursor-listener position="0 0 -8.52" radius="0.8" material="color: #EF2D5E"></a-sphere>
+        <a-sphere class="clickable" cursor-listener position="4.8 0 -7" radius="0.8" material="color: #EF2D5E"></a-sphere>
+        <a-sphere class="clickable" cursor-listener position="7.5 0 -4" radius="0.8" material="color: #EF2D5E"></a-sphere>
+        <a-sphere class="clickable" cursor-listener position="8.52 0 0" radius="0.8" material="color: #EF2D5E"></a-sphere>
+        <a-sphere class="clickable" cursor-listener position="7.5 0 4" radius="0.8" material="color: #EF2D5E"></a-sphere>
 
         <a-camera position="0 2 5">
             <a-cursor
