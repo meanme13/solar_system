@@ -15,13 +15,13 @@
         init: function () {
             this.el.addEventListener('mouseenter', function () {
                 var entity = document.querySelector('[sound]');
-                entity.components.sound.playSound();
+                entity.playSound();
                 this.setAttribute('animation', {property: 'scale', to: '2, 2, 2', dur: 300, easing: 'linear'});
             });
             this.el.addEventListener('mouseleave', function () {
                 this.setAttribute('animation', {property: 'scale', to: '1, 1, 1', dur: 300, easing: 'linear'});
                 var entity = document.querySelector('[sound]');
-                entity.components.sound.stopSound();
+                entity.stopSound();
             });
         }
     });
