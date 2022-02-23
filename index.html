@@ -32,21 +32,28 @@
 
 </script>
 
-<audio src="vivaldi.mp3" id="sound"></audio>
-
     <a-scene
         vr-mode-ui="enabled: false;"
         renderer="logarithmicDepthBuffer: true;"
         embedded
         arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
 
-<!--        <a-assets>-->
-<!--            <audio id="vivaldi" src="vivaldi.mp3" preload="auto"></audio>-->
-<!--        </a-assets>-->
+        <a-assets>
 
-        <a-sphere class="clickable" cursor-listener position="-7.5 0 4" radius="0.8" material="color: #31bff3">
+            <a-asset-item id="earth" src="/models/Earth.glb" ></a-asset-item>
+            <a-asset-item id="jupiter" src="/models/Jupiter.glb" ></a-asset-item>
+            <a-asset-item id="mars" src="/models/Mars.glb" ></a-asset-item>
+            <a-asset-item id="mercury" src="/models/Mercury.glb" ></a-asset-item>
+            <a-asset-item id="moon" src="/models/Moon.glb" ></a-asset-item>
+            <a-asset-item id="neptune" src="/models/Neptune.glb" ></a-asset-item>
+            <a-asset-item id="saturn" src="/models/Saturn.glb" ></a-asset-item>
+            <a-asset-item id="sun" src="/models/Sun.glb" ></a-asset-item>
+            <a-asset-item id="uranus" src="/models/Uranus.glb" ></a-asset-item>
+            <a-asset-item id="venus" src="/models/Venus.glb" ></a-asset-item>
 
-        </a-sphere>
+        </a-assets>
+
+        <a-entity class="clickable" cursor-listener position="-7.5 0 4" gltf-model="#earth" scale="1 1 1"></a-entity>
 
         <a-sphere class="clickable" cursor-listener position="-8.52 0 0" radius="0.8" material="color: #a484e9">
 
@@ -60,9 +67,7 @@
 
         </a-sphere>
 
-        <a-sphere class="clickable" cursor-listener position="0 0 -8.52" radius="0.8" material="color: #f6e683">
-
-        </a-sphere>
+        <a-entity class="clickable" cursor-listener position="0 0 -8.52" gltf-model="#jupiter" scale="1 1 1"></a-entity>
 
         <a-sphere class="clickable" cursor-listener position="4.8 0 -7" radius="0.8" material="color: #79d45e">
 
@@ -80,6 +85,10 @@
 
         </a-sphere>
 
+        <a-sphere class="clickable" cursor-listener position="4.8 0 7" radius="0.8" material="color: #8CB3B1">
+
+        </a-sphere>
+
 
         <a-camera position="0 2 5">
             <a-cursor
@@ -88,8 +97,6 @@
                 raycaster="far: 20; interval: 500; objects: .clickable"
             ></a-cursor>
         </a-camera>
-
-<!--        <a-entity sound="src: url(vivaldi.mp3); loop: true;"></a-entity>-->
 
     </a-scene>
 </body>
