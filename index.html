@@ -39,42 +39,40 @@
         embedded
         arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
 
-<!--        <a-assets>-->
+        <a-assets>
 
-<!--            <a-asset-item id="sun" src="planet.gltf" ></a-asset-item>-->
+            <a-asset-item id="earth" src="/models/Earth.glb" ></a-asset-item>
+            <a-asset-item id="jupiter" src="/models/Jupiter.glb" ></a-asset-item>
+            <a-asset-item id="mars" src="/models/Mars.glb" ></a-asset-item>
+            <a-asset-item id="mercury" src="/models/Mercury.glb" ></a-asset-item>
+            <a-asset-item id="moon" src="/models/Moon.glb" ></a-asset-item>
+            <a-asset-item id="neptune" src="/models/Neptune.glb" ></a-asset-item>
+            <a-asset-item id="saturn" src="/models/Saturn.glb" ></a-asset-item>
+            <a-asset-item id="sun" src="/models/Sun.glb" ></a-asset-item>
+            <a-asset-item id="uranus" src="/models/Uranus.glb" ></a-asset-item>
+            <a-asset-item id="venus" src="/models/Venus.glb" ></a-asset-item>
 
-<!--            <a-asset-item id="earth" src="/models/Earth.glb" ></a-asset-item>-->
-<!--            <a-asset-item id="jupiter" src="/models/Jupiter.glb" ></a-asset-item>-->
-<!--            <a-asset-item id="mars" src="/models/Mars.glb" ></a-asset-item>-->
-<!--            <a-asset-item id="mercury" src="/models/Mercury.glb" ></a-asset-item>-->
-<!--            <a-asset-item id="moon" src="/models/Moon.glb" ></a-asset-item>-->
-<!--            <a-asset-item id="neptune" src="/models/Neptune.glb" ></a-asset-item>-->
-<!--            <a-asset-item id="saturn" src="/models/Saturn.glb" ></a-asset-item>-->
-<!--            <a-asset-item id="sun" src="/models/Sun.glb" ></a-asset-item>-->
-<!--            <a-asset-item id="uranus" src="/models/Uranus.glb" ></a-asset-item>-->
-<!--            <a-asset-item id="venus" src="/models/Venus.glb" ></a-asset-item>-->
+        </a-assets>
 
-<!--        </a-assets>-->
+        <a-entity class="clickable" cursor-listener position="-7.5 0 4" gltf-model="#earth" ></a-entity>
 
-<!--        <a-entity class="clickable" cursor-listener position="-7.5 0 4" gltf-model="#earth" ></a-entity>-->
+        <a-sphere class="clickable" cursor-listener position="-8.52 0 0" gltf-model="#jupiter" ></a-sphere>
 
-<!--        <a-sphere class="clickable" cursor-listener position="-8.52 0 0" gltf-model="#jupiter" ></a-sphere>-->
+        <a-sphere class="clickable" cursor-listener position="-7.5 0 -4" gltf-model="#mars" ></a-sphere>
 
-<!--        <a-sphere class="clickable" cursor-listener position="-7.5 0 -4" gltf-model="#mars" ></a-sphere>-->
+        <a-sphere class="clickable" cursor-listener position="-4.8 0 -7" gltf-model="#mercury" ></a-sphere>
 
-<!--        <a-sphere class="clickable" cursor-listener position="-4.8 0 -7" gltf-model="#mercury" ></a-sphere>-->
+        <a-entity class="clickable" cursor-listener position="0 0 -8.52" gltf-model="#sun"></a-entity>
 
-        <a-entity class="clickable" cursor-listener position="0 0 -8.52" gltf-model="./planet.gltf"></a-entity>
+        <a-entity class="clickable" cursor-listener position="4.8 0 -7" gltf-model="#moon"></a-entity>
 
-<!--        <a-entity class="clickable" cursor-listener position="4.8 0 -7" gltf-model="#moon"></a-entity>-->
+        <a-entity class="clickable" cursor-listener position="7.5 0 -4" gltf-model="#neptune"></a-entity>
 
-<!--        <a-entity class="clickable" cursor-listener position="7.5 0 -4" gltf-model="#neptune"></a-entity>-->
+        <a-entity class="clickable" cursor-listener position="8.52 0 0" gltf-model="#saturn"></a-entity>
 
-<!--        <a-entity class="clickable" cursor-listener position="8.52 0 0" gltf-model="#saturn"></a-entity>-->
+        <a-entity class="clickable" cursor-listener position="7.5 0 4" gltf-model="#uranus"></a-entity>
 
-<!--        <a-entity class="clickable" cursor-listener position="7.5 0 4" gltf-model="#uranus"></a-entity>-->
-
-<!--        <a-entity class="clickable" cursor-listener position="4.8 0 7" gltf-model="#venus"></a-entity>-->
+        <a-entity class="clickable" cursor-listener position="4.8 0 7" gltf-model="#venus"></a-entity>
 
 
         <a-camera position="0 2 5">
