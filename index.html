@@ -23,11 +23,13 @@
             align-items: center;
             justify-content: center;
             background-color: #000000;
+            z-index: 120;
         }
         p {
             color: #d9d699;
             font-family: Arial, sans-serif;
-            font-size: 20px;
+            font-size: 21px;
+            padding: 20px 0;
         }
     </style>
 </head>
@@ -80,10 +82,7 @@
         <a-sphere class="clickable" cursor-listener position="-8.5 0 -4" gltf-model="./models/Mars.glb" ></a-sphere>
         <a-sphere class="clickable" cursor-listener position="-4.8 0 -7" gltf-model="./models/Mercury.glb" ></a-sphere>
 
-<!--        <a-entity class="clickable" cursor-listener position="0 0 -8.52" gltf-model="./models/Sun.glb">-->
-<!--            <a-entity class="clickable d-none" cursor-listener position="0 -1.5 -8.52" gltf-model="txt.glb"></a-entity>-->
-<!--        </a-entity>-->
-
+        <a-entity class="clickable" cursor-listener position="0 0 -8.52" gltf-model="./models/Sun.glb"></a-entity>
 
         <a-entity class="clickable" cursor-listener position="4.8 0 -7" gltf-model="./models/Moon.glb"></a-entity>
         <a-entity class="clickable" cursor-listener position="8.5 0 -4" gltf-model="./models/Neptune.glb"></a-entity>
