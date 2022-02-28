@@ -8,25 +8,41 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ar.js/2.1.1/aframe-ar.min.js"></script>
 <!--    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>-->
 <!--    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>-->
+    <style>
+        .d-none {
+            display: none;
+        }
+        div {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-content: space-evenly;
+            background-color: #000000;
+            opacity: 90%;
+        }
+        p {
+            color: #d9d699;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
-
-<style>
-    .d-none {
-        display: none;
-    }
-</style>
 
 <script>
 
     AFRAME.registerComponent('cursor-listener', {
         init: function () {
             this.el.addEventListener('mouseenter', function () {
-                this.setAttribute('animation', {property: 'scale', to: '2, 2, 2', dur: 300, easing: 'linear'});
+                this.setAttribute('animation', {property: 'scale', to: '2, 2, 2', dur: 100, easing: 'linear'});
                 this.firstChild.classList.remove('d-none');
             });
             this.el.addEventListener('mouseleave', function () {
-                this.setAttribute('animation', {property: 'scale', to: '1, 1, 1', dur: 300, easing: 'linear'});
+                this.setAttribute('animation', {property: 'scale', to: '1, 1, 1', dur: 100, easing: 'linear'});
                 this.firstChild.classList.add('d-none');
             });
         }
@@ -39,7 +55,19 @@
     });
     sound.play();
 
+    function preloader() {
+        const preloader = document.getElementById('preloader');
+        preloader.style.display = 'none'
+    }
+    setTimeout(preloader, 3000);
+
 </script>
+
+    <div id="preloader">
+        <p>put your phone in front of you</p>
+        <p>point cursor at planet</p>
+        <p>swipe to see other planets</p>
+    </div>
 
     <a-scene
         vr-mode-ui="enabled: false;"
@@ -67,7 +95,7 @@
             <a-cursor
                 fuse="false"
                 material="transparent: true;"
-                raycaster="far: 20; interval: 500; objects: .clickable"
+                raycaster="far: 20; interval: 0; objects: .clickable"
             ></a-cursor>
         </a-camera>
 
