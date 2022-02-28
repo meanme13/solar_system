@@ -11,21 +11,29 @@
 </head>
 <body>
 
+<style>
+    .d-none {
+        display: none;
+    }
+</style>
+
 <script>
 
     AFRAME.registerComponent('cursor-listener', {
         init: function () {
             this.el.addEventListener('mouseenter', function () {
                 this.setAttribute('animation', {property: 'scale', to: '2, 2, 2', dur: 300, easing: 'linear'});
+                this.firstChild.classList.remove('d-none');
             });
             this.el.addEventListener('mouseleave', function () {
                 this.setAttribute('animation', {property: 'scale', to: '1, 1, 1', dur: 300, easing: 'linear'});
+                this.firstChild.classList.add('d-none');
             });
         }
     });
 
     let sound = new Howl({
-        src: ['vivaldi.mp3'],
+        src: ['sound.mp3'],
         autoplay: true,
         loop: true
     });
@@ -39,27 +47,15 @@
         embedded
         arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
 
-<!--        <a-assets>-->
-
-<!--            <a-asset-item id="earth" src="/models/Earth.glb" ></a-asset-item>-->
-<!--            <a-asset-item id="jupiter" src="/models/Jupiter.glb" ></a-asset-item>-->
-<!--            <a-asset-item id="mars" src="/models/Mars.glb" ></a-asset-item>-->
-<!--            <a-asset-item id="mercury" src="/models/Mercury.glb" ></a-asset-item>-->
-<!--            <a-asset-item id="moon" src="/models/Moon.glb" ></a-asset-item>-->
-<!--            <a-asset-item id="neptune" src="/models/Neptune.glb" ></a-asset-item>-->
-<!--            <a-asset-item id="saturn" src="/models/Saturn.glb" ></a-asset-item>-->
-<!--            <a-asset-item id="sun" src="/models/Sun.glb" ></a-asset-item>-->
-<!--            <a-asset-item id="uranus" src="/models/Uranus.glb" ></a-asset-item>-->
-<!--            <a-asset-item id="venus" src="/models/Venus.glb" ></a-asset-item>-->
-
-<!--        </a-assets>-->
-
         <a-entity class="clickable" cursor-listener position="-9.5 0 4" gltf-model="./models/Earth.glb" ></a-entity>
         <a-sphere class="clickable" cursor-listener position="-10.52 0 0" gltf-model="./models/Jupiter.glb" ></a-sphere>
         <a-sphere class="clickable" cursor-listener position="-8.5 0 -4" gltf-model="./models/Mars.glb" ></a-sphere>
         <a-sphere class="clickable" cursor-listener position="-4.8 0 -7" gltf-model="./models/Mercury.glb" ></a-sphere>
 
-        <a-entity class="clickable" cursor-listener position="0 0 -8.52" gltf-model="./models/Sun.glb"></a-entity>
+        <a-entity class="clickable" cursor-listener position="0 0 -8.52" gltf-model="./models/Sun.glb">
+            <a-entity class="clickable d-none" cursor-listener position="0 -1.5 -8.52" gltf-model="txt.glb"></a-entity>
+        </a-entity>
+
 
         <a-entity class="clickable" cursor-listener position="4.8 0 -7" gltf-model="./models/Moon.glb"></a-entity>
         <a-entity class="clickable" cursor-listener position="8.5 0 -4" gltf-model="./models/Neptune.glb"></a-entity>
@@ -67,11 +63,10 @@
         <a-entity class="clickable" cursor-listener position="10.5 0 4" gltf-model="./models/Uranus.glb"></a-entity>
         <a-entity class="clickable" cursor-listener position="9.5 0 7" gltf-model="./models/Venus.glb"></a-entity>
 
-
         <a-camera position="0 2 6">
             <a-cursor
                 fuse="false"
-                material="transparent: true; opacity: 0"
+                material="transparent: true;"
                 raycaster="far: 20; interval: 500; objects: .clickable"
             ></a-cursor>
         </a-camera>
