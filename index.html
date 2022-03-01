@@ -9,9 +9,7 @@
 <!--    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>-->
 <!--    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>-->
     <style>
-        .d-none {
-            display: none;
-        }
+
         div {
             width: 100%;
             height: 100%;
@@ -41,11 +39,11 @@
         init: function () {
             this.el.addEventListener('mouseenter', function () {
                 this.setAttribute('animation', {property: 'scale', to: '2, 2, 2', dur: 100, easing: 'linear'});
-                this.firstChild.style.display = 'block';
+                this.firstChild.setAttribute('visible', true);
             });
             this.el.addEventListener('mouseleave', function () {
                 this.setAttribute('animation', {property: 'scale', to: '1, 1, 1', dur: 100, easing: 'linear'});
-                this.firstChild.style.display = 'none';
+                this.firstChild.setAttribute('visible', false);
             });
         }
     });
@@ -83,7 +81,7 @@
         <a-sphere class="clickable" cursor-listener position="-4.8 0 -7" gltf-model="./models/Mercury.glb" ></a-sphere>
 
         <a-entity class="clickable" cursor-listener position="0 0 -8.52" gltf-model="./models/Sun.glb"></a-entity>
-        <a-image style="display: none" position="0 -5 -8.52" scale="8 5 5" rotation="-20 0 0" src="./12.png"></a-image>
+        <a-image visible="false" position="0 -5 -8.52" scale="8 5 5" rotation="-20 0 0" src="./12.png"></a-image>
 
         <a-entity class="clickable" cursor-listener position="4.8 0 -7" gltf-model="./models/Moon.glb"></a-entity>
         <a-entity class="clickable" cursor-listener position="8.5 0 -4" gltf-model="./models/Neptune.glb"></a-entity>
