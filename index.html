@@ -75,20 +75,45 @@
         embedded
         arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
 
-        <a-entity class="clickable" cursor-listener position="-9.5 0 4" gltf-model="./models/Earth.glb" ></a-entity>
-        <a-sphere class="clickable" cursor-listener position="-10.52 0 0" gltf-model="./models/Jupiter.glb" ></a-sphere>
-        <a-sphere class="clickable" cursor-listener position="-8.5 0 -4" gltf-model="./models/Mars.glb" ></a-sphere>
-        <a-sphere class="clickable" cursor-listener position="-4.8 0 -7" gltf-model="./models/Mercury.glb" ></a-sphere>
-
-        <a-entity class="clickable" cursor-listener position="0 0 -8.52" gltf-model="./models/Sun.glb">
-            <a-image visible="false" position="0 -6.3 -8.52" scale="9.5 5.5 5" rotation="-20 0 0" src="./13.png"></a-image>
+        <a-entity class="clickable" cursor-listener position="-9.5 0 4" gltf-model="./models/Earth.glb" >
+            <a-image visible="false" position="-9.5 -6.3 4" scale="9.5 5.5 5" rotation="-20 0 0" src="./txts/earth.png"></a-image>
         </a-entity>
 
-        <a-entity class="clickable" cursor-listener position="4.8 0 -7" gltf-model="./models/Moon.glb"></a-entity>
-        <a-entity class="clickable" cursor-listener position="8.5 0 -4" gltf-model="./models/Neptune.glb"></a-entity>
-        <a-entity class="clickable" cursor-listener position="10.52 0 0" gltf-model="./models/Saturn.glb"></a-entity>
-        <a-entity class="clickable" cursor-listener position="10.5 0 4" gltf-model="./models/Uranus.glb"></a-entity>
-        <a-entity class="clickable" cursor-listener position="11.5 0 8" gltf-model="./models/Venus.glb"></a-entity>
+        <a-sphere class="clickable" cursor-listener position="-10.52 0 0" gltf-model="./models/Jupiter.glb" >
+            <a-image visible="false" position="-10.52 -6.3 0" scale="9.5 5.5 5" rotation="-20 0 0" src="./txts/jupiter.png"></a-image>
+        </a-sphere>
+
+        <a-sphere class="clickable" cursor-listener position="-8.5 0 -4" gltf-model="./models/Mars.glb" >
+            <a-image visible="false" position="-8.5 -6.3 -4" scale="9.5 5.5 5" rotation="-20 0 0" src="./txts/mars.png"></a-image>
+        </a-sphere>
+
+        <a-sphere class="clickable" cursor-listener position="-4.8 0 -7" gltf-model="./models/Mercury.glb" >
+            <a-image visible="false" position="-4.8 -6.3 -7" scale="9.5 5.5 5" rotation="-20 0 0" src="./txts/mercury.png"></a-image>
+        </a-sphere>
+
+        <a-entity class="clickable" cursor-listener position="0 0 -8.52" gltf-model="./models/Sun.glb">
+            <a-image visible="false" position="0 -6.3 -8.52" scale="9.5 5.5 5" rotation="-20 0 0" src="./txts/sun.png"></a-image>
+        </a-entity>
+
+        <a-entity class="clickable" cursor-listener position="4.8 0 -7" gltf-model="./models/Moon.glb">
+            <a-image visible="false" position="-4.8 -6.3 -7" scale="9.5 5.5 5" rotation="-20 0 0" src="./txts/moon.png"></a-image>
+        </a-entity>
+
+        <a-entity class="clickable" cursor-listener position="8.5 0 -4" gltf-model="./models/Neptune.glb">
+            <a-image visible="false" position="8.5 -6.3 -4" scale="9.5 5.5 5" rotation="-20 0 0" src="./txts/neptune.png"></a-image>
+        </a-entity>
+
+        <a-entity class="clickable" cursor-listener position="10.52 0 0" gltf-model="./models/Saturn.glb">
+            <a-image visible="false" position="10.52 -6.3 0" scale="9.5 5.5 5" rotation="-20 0 0" src="./txts/saturn.png"></a-image>
+        </a-entity>
+
+        <a-entity class="clickable" cursor-listener position="10.5 0 4" gltf-model="./models/Uranus.glb">
+            <a-image visible="false" position="10.5 -6.3 4" scale="9.5 5.5 5" rotation="-20 0 0" src="./txts/uranus.png"></a-image>
+        </a-entity>
+
+        <a-entity class="clickable" cursor-listener position="11.5 0 8" gltf-model="./models/Venus.glb">
+            <a-image visible="false" position="11.5 -6.3 8" scale="9.5 5.5 5" rotation="-20 0 0" src="./txts/venus.png"></a-image>
+        </a-entity>
 
         <a-camera position="0 2 6">
             <a-cursor
