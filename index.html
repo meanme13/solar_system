@@ -59,7 +59,7 @@
         const preloader = document.getElementById('preloader');
         preloader.style.display = 'none'
     }
-    setTimeout(preloader, 100);
+    setTimeout(preloader, 10000);
 
 </script>
 
@@ -70,9 +70,10 @@
     </div>
 
     <a-scene
-
+        vr-mode-ui="enabled: false;"
+        renderer="logarithmicDepthBuffer: true;"
         embedded
-        arjs>
+        arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
 
         <a-entity class="clickable" cursor-listener position="-13.5 0 4" gltf-model="./models/Earth.glb" >
             <a-image visible="false" position="-11.5 -7.5 -1" scale="9.5 5.5 5" rotation="-20 82 0" src="./txts/earth.png"></a-image>
